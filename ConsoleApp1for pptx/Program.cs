@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Newtonsoft.Json;
 namespace ConsoleApp1for_pptx
 {
     public class Program
@@ -524,6 +524,11 @@ namespace ConsoleApp1for_pptx
 
            Console.WriteLine($"Ename {maxsalary.ename} ,Dename {maxsalary.dname},salary {maxsalary.salary}");
             #endregion Group Join Practices
+
+            Console.WriteLine("using Newtonsoft.json convert object to json");
+            var jsonobject = JsonConvert.SerializeObject(employees);
+
+            Console.WriteLine($"Json Result {jsonobject}");
             Console.ReadLine();
         }
         static IEnumerable<string> GetFruitsStartingWith(IEnumerable<string> fruits, char startLetter)
