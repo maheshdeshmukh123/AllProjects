@@ -529,6 +529,13 @@ namespace ConsoleApp1for_pptx
             var jsonobject = JsonConvert.SerializeObject(employees);
 
             Console.WriteLine($"Json Result {jsonobject}");
+
+            Console.WriteLine("swap numbers");
+           int num11 = 10;
+            int num2 = 20;
+
+            (num11, num2) = (num2, num11);
+            Console.WriteLine($"num1 is {num11} ,num2 is {num2}");
             Console.ReadLine();
         }
         static IEnumerable<string> GetFruitsStartingWith(IEnumerable<string> fruits, char startLetter)
